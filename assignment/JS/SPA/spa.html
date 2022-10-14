@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Document Title  -->
+    <title>SPA</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+
+    <!-- Meta tags  -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        /*<!-- main styles-->*/
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #customerContent{
+            display: none;
+        }
+        #itemContent{
+            display: none;
+        }
+        #orderContent{
+            display: none;
+        }
+        #orderDetailContent {
+            display: none;
+        }
+        header{
+            width: 100%;
+            background-color: #EECBB7;
+        }
+
+        #dashboard  .card-title img{
+            width: 80px;
+        }
+
+        #dashboard .collapse {
+            flex-basis: 100%;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: left;
+        }
+
+        #dashboard  .collapse a{
+            font-size: 20px;
+            color: #000000;
+        }
+        #dashboard .collapse a:hover{
+            color: orange;
+            transition: .4s;
+        }
+
+        main #dashboard {
+            height: 700px;
+            margin: 50px auto;
+            display: flex;
+        }
+
+        main #dashboard  section{
+            margin: 80px auto;
+            text-align: left;
+        }
+        main #dashboard a{
+            margin-top: 18px !important;
+            text-decoration: none;
+            padding-top: 20px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 98px;
+            -webkit-box-shadow: 0 5px 5px 2px #484848;
+            border: 1px solid #000;
+            background: #EFDBCF;
+            color: #222222;
+            font-size: 20px;
+            display: inline-block;
+            width: 475px;
+            height: 180px;
+            text-align: center;
+            margin-bottom: 13px;
+        }
+        main #dashboard  img:hover{
+            transform: scale(1.3);
+            transition: .3s;
+        }
+
+        /*<!-- customer and item-->*/
+        .customer-head{
+            width: 100%;
+            height: 40px;
+            background-color: #EFDBCF;
+
+        }
+        .item-head{
+            width: 100%;
+            height: 40px;
+            background-color: #EFDBCF;
+
+        }
+        .order-head{
+            width: 100%;
+            height: 40px;
+            background-color: #EFDBCF;
+
+        }
+        header{
+            width: 100%;
+            background-color:  #EECBB7;
+            margin-bottom: 2rem;
+        }
+
+        .main-section{
+            width: 90%;
+            height: 80vh;
+            margin: auto;
+            background-color: #EEEEF2 ;
+        }
+        .collapse {
+            flex-basis: 100%;
+            flex-grow: 1;
+            align-items: center;
+            justify-content:left;
+        }
+
+        .collapse a{
+            font-size: 20px;
+            color: #000000;
+        }
+        .collapse a:hover{
+            color: #f9004d;
+            transition: .4s;
+        }
+        .breadcrumb {
+            margin-left: 20px;
+            list-style: none;
+            border-radius: 4px;
+        }
+        .breadcrumb li{
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        .breadcrumb a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .back{
+            margin-top: 20px;
+            margin-left: 20px;
+            color: black;
+        }
+
+        .search{
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+
+        .d-flex{
+            width: 500px;
+            margin-left: 10px;
+        }
+        .add{
+            width: 350px;
+        }
+        .add button:first-child{
+            background-color:#6687DD ;
+        }
+        .add button:last-child{
+            background-color:#CB2FCE ;
+        }
+        .add button:first-child:hover{
+            background-color:#6687DD ;
+        }
+        .add button:last-child:hover{
+            background-color:#CB2FCE ;
+        }
+        .cus-table{
+            margin-top: 25px;
+            margin-left: 20px;
+            background-color: #EFDBCF
+        }
+        .save-cus, .close-cus{
+            width: 232px;
+        }
+
+        tbody tr {
+            color: black;
+        }
+
+        /*<!-- order-->*/
+        #order {
+            width: 90%;
+            margin: auto;
+            background-color: #EEEEF2;
+        }
+
+        #order .collapse {
+            flex-basis: 100%;
+            flex-grow: 1;
+            align-items: center;
+            justify-content: left;
+        }
+
+        #order .collapse a {
+            font-size: 20px;
+            color: #000000;
+        }
+
+        #order .collapse a:hover {
+            color: #f9004d;
+            transition: .4s;
+        }
+
+        #order .breadcrumb {
+            margin-left: 20px;
+            list-style: none;
+            border-radius: 4px;
+        }
+
+        #order .breadcrumb li {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        #order .breadcrumb a {
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        #order .back {
+            margin-top: 20px;
+            color: black;
+
+        }
+
+        #order .add button:first-child {
+            background-color:  #A8ACF6;
+            margin-left: 30px;
+            margin-top: 32px;
+        }
+
+        #order .add button:first-child:hover {
+            background-color: #A8ACF6;
+        }
+
+        #order tbody tr {
+            color: black;
+        }
+
+        #order .order-table  {
+            margin-top: 25px;
+            height: 38vh;
+            background-color: #EFDBCF;
+        }
+
+        #order .order-detail {
+            margin-top: 25px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #order .add-button {
+            text-align: right;
+            margin-top: 1rem;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+<!-- header -->
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/1000_F_73106428_Q91LNUigg4ZRIi1ItxIcgEzyW8C9yluE.jpg" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+                POS System
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#" id="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="customer">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="item">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="orders">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="order-Detail">Order-Detail</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/1000_F_152711253_7J1blWps9QskMf86UKGCCjXDP102eKqb.jpg" alt="Logo" width="40" height="40"
+                     class="d-inline-block align-text-top">
+                Log Out
+            </a>
+        </div>
+    </nav>
+</header>
+
+<!-- dashboard -->
+<main id="dashboardContent">
+    <section id="dashboard">
+        <section>
+            <a href="#">
+                <img src="assets/img/people.png" width="70px">
+                <br>
+                <br>
+                Customers
+            </a>
+            <a href="#">
+                <img src="assets/img/product.png" width="70px">
+                <br>
+                <br>
+                Items
+            </a>
+            <a href="#">
+                <img src="assets/img/clipboard.png" width="70px">
+                <br>
+                <br>
+                Orders
+            </a>
+            <a href="#">
+                <img src="assets/img/business-report.png" width="70px">
+                <br>
+                <br>
+                Sales reports
+            </a>
+            <a href="#">
+                <img src="assets/img/1000_F_152711253_7J1blWps9QskMf86UKGCCjXDP102eKqb.jpg" width="70px">
+                <br>
+                <br>
+                LogOut
+            </a>
+        </section>
+    </section>
+</main>
+
+<!-- customer  -->
+<main id="customerContent">
+    <section class="main-section">
+        <section class="customer-head">
+            <ul class="breadcrumb">
+                <img src="assets/img/people.png" width="36px">
+                <li><a href="#">Dashboard /</a></li>
+                <li class="active"> Customers</li>
+            </ul>
+        </section>
+        <button type="button" class="btn btn-secondary back" style="background-color: #EFDBCF">
+            <img src="assets/img/arrow.png" width="26px">
+            Back
+        </button>
+
+        <section class="search">
+            <form class="d-flex" role="search" style="background-color: #A8ACF6">
+                <input class="form-control me-2" type="search" placeholder="Search Customer..." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"style="background-color:#D07E1E ">Search</button>
+            </form>
+            <div class="add">
+                <button type="button" class="btn btn-secondary add-cus" data-bs-target="#saveCustomers"
+                        data-bs-toggle="modal"style="color: black">
+                    Add Customer
+                </button>
+                <button type="button" class="btn btn-secondary view-cuss"style="color:black" id="delete">Delete Customer</button>
+            </div>
+        </section>
+
+        <section class="cus-table">
+            <div div class="col-md-12 mt-4" style="height:430px; overflow-y: scroll">
+            <table class="table table-bordered">
+                <thead class="bg-danger text-white">
+                <tr style="background-color:  #EC9463">
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Customer Address</th>
+                    <th>Customer Contact</th>
+                    <th>Customer Salary</th>
+                    <th style="width: 190px">Action</th>
+                </tr>
+                </thead>
+                <tbody id="tblCustomer">
+
+                </tbody>
+            </table>
+            </div>
+        </section>
+    </section>
+
+    <!-- customer-form-save -->
+
+    <div aria-hidden="true" aria-labelledby="customerLabel" class="modal fade" id="saveCustomers" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="customerLabel">Customer Save</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerID">Customer ID</label>
+                            <input class="form-control" id="txtCustomerID" type="text">
+                            <span class="control-error" id="lblCusID"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerName">Customer Name</label>
+                            <input class="form-control" id="txtCustomerName" multiple type="text">
+                            <span class="control-error" id="lblCusName"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerAddress">Customer Address</label>
+                            <input class="form-control" id="txtCustomerAddress" type="text">
+                            <span class="control-error" id="lblCusAddress"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerContact">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerContact" type="text">
+                            <span class="control-error" id="lblCusContact"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerSalary">Customer Salary</label>
+                            <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
+                            <span class="control-error" id="lblCusSalary"></span>
+                        </div>
+
+
+                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+                            <button class="btn btn-success save-cus" type="button" id="saveCustomer">Save</button>
+                            <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- customer-form-edit -->
+
+    <div aria-hidden="true" aria-labelledby="customerLabelEdit" class="modal fade" id="editCustomers" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="customerLabelEdit">Customer Update</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerIDEdit">Customer ID</label>
+                            <input class="form-control" id="txtCustomerIDEdit" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerNameEdit">Customer Name</label>
+                            <input class="form-control" id="txtCustomerNameEdit" multiple type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerAddressEdit">Customer Address</label>
+                            <input class="form-control" id="txtCustomerAddressEdit" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerContactEdit">Customer Contact</label>
+                            <input class="form-control" id="txtCustomerContactEdit" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtCustomerSalaryEdit">Customer Salary</label>
+                            <input class="form-control form-control-sm" id="txtCustomerSalaryEdit" type="number">
+                        </div>
+
+
+                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+                            <button class="btn btn-success save-cus" type="button" id="updateCustomer">Update</button>
+                            <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!--item-->
+<main id="itemContent">
+    <section class="main-section">
+        <section class="item-head">
+            <ul class="breadcrumb">
+                <img src="assets/img/product.png" width="36px">
+                <li><a href="#">Dashboard /</a></li>
+                <li class="active"> Items</li>
+            </ul>
+        </section>
+        <button type="button" class="btn btn-secondary back" style="background-color: #EFDBCF">
+            <img src="assets/img/arrow.png" width="26px">
+            Back
+        </button>
+
+        <section class="search">
+            <form class="d-flex" role="search" style="background-color: #A8ACF6">
+                <input class="form-control me-2" type="search" placeholder="Search Item..." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"style="background-color: #D07E1E">Search</button>
+            </form>
+            <div class="add">
+                <button type="button" class="btn btn-secondary add-cus" data-bs-target="#saveItems"
+                        data-bs-toggle="modal"style="color: black">
+                    Add Item
+                </button>
+                <button type="button" class="btn btn-secondary view-cuss"style="color: black" id="delete-item">Delete Item</button>
+            </div>
+        </section>
+
+        <section class="item-table">
+            <div div class="col-md-12 mt-4" style="height:430px; overflow-y: scroll">
+            <table class="table table-bordered">
+                <thead class="bg-danger text-white">
+                <tr style="background-color:  #EC9463">
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Qty</th>
+                    <th>Uniq Price</th>
+                    <th style="width: 190px">Action</th>
+                </tr>
+                </thead>
+                <tbody id="tblItem">
+
+                </tbody>
+            </table>
+            </div>
+        </section>
+    </section>
+
+    <!-- item-form-save -->
+
+    <div aria-hidden="true" aria-labelledby="itemLabel" class="modal fade" id="saveItems" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="itemLabel">Add Item</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtItemCode">Item Code</label>
+                            <input class="form-control" id="txtItemCode" type="text">
+                            <span class="control-error" id="lblItemCode"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtItemName">Item Name</label>
+                            <input class="form-control" id="txtItemName" multiple type="text">
+                            <span class="control-error" id="lblItemName"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtItemQty">Qty</label>
+                            <input class="form-control" id="txtItemQty" type="number">
+                            <span class="control-error" id="lblItemQty"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtItemUnitPrice">Uniq Price</label>
+                            <input class="form-control" id="txtItemUnitPrice" type="number">
+                            <span class="control-error" id="lblItemUnitPrice"></span>
+                        </div>
+
+
+
+                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+                            <button class="btn btn-success save-cus" type="button" id="saveItem">Save</button>
+                            <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- item-form-edit  -->
+
+    <div aria-hidden="true" aria-labelledby="itemLabelEdit" class="modal fade" id="editItems" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="itemLabelEdit">Item Update</h5>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                    <section>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtItemCodeEdit">Item Code</label>
+                            <input class="form-control" id="txtItemCodeEdit" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtItemNameEdit">Item Name</label>
+                            <input class="form-control" id="txtItemNameEdit" multiple type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtItemQtyEdit">Qty</label>
+                            <input class="form-control" id="txtItemQtyEdit" type="number">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="txtItemUnitPriceEdit">Uniq Price</label>
+                            <input class="form-control" id="txtItemUnitPriceEdit" type="number">
+                        </div>
+
+
+                        <div aria-label="Basic mixed styles example" class="btn-group" role="group">
+                            <button class="btn btn-success save-cus" type="button" id="updateItem">Update</button>
+                            <button class="btn btn-secondary close-cus" data-bs-dismiss="modal" type="button">Close
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- order -->
+<main id="orderContent">
+    <section class="main-section" id="order">
+        <section class="order-head">
+            <ul class="breadcrumb">
+                <img src="assets/img/clipboard.png" width="35px">
+                <li><a href="#">Dashboard /</a></li>
+                <li class="active"> Orders</li>
+            </ul>
+        </section>
+        <button type="button" class="btn btn-secondary back" style="background-color:  #EECBB7">
+            <img src="assets/img/arrow.png" width="26px">
+            Back
+        </button>
+
+
+        <div class="row order-detail">
+            <div class="col-lg-6 mt-lg-0 mt-3">
+                <div class="card"style="background-color: #EFDBCF">
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Order ID</label>
+                                    <input class="form-control" id="orderID" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Date</label>
+                                    <input class="form-control" id="txtOrderDate" type="date">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Customer Id</label>
+                                    <select class="form-select" id="selectCustomerID">
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Customer Name</label>
+                                    <input class="form-control" id="orderCustomerName" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Item Code</label>
+                                    <select class="form-select" id="selectItemCode">
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Item Description</label>
+                                    <input class="form-control" id="itemDescription" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-5">
+                                <div class="form-group">
+                                    <label>Qty On Hand</label>
+                                    <input class="form-control" id="qtyOnHand" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label>Unit Price</label>
+                                    <input class="form-control" id="unitPrice" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="form-group">
+                                    <label>Qty</label>
+                                    <input class="form-control" id="qty" type="text">
+                                </div>
+                            </div>
+                            <div class="add-button">
+                                <button type="button" class="btn btn-primary col-12 col-sm-auto" id="addItem">Add To Cart</button>
+                                <button type="button" class="btn btn-primary col-12 col-sm-auto" id="update">Update</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="card">
+                    <section class="content-box-2 p-4 bg-light">
+                        <div class="row" style="background-color:#EFDBCF">
+                            <div class="col-12" style="background-color:#EFDBCF">
+                                <div class="row" style="background-color:#EFDBCF">
+                                    <div class="col-12" style="background-color:#EFDBCF">
+                                        <span class="" id="total-text"style="color: blue">Total : </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="total"style="color: blue">00.0</span> Rs/=
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <span id="total-text1"style="color: red">SubTotal : </span>
+                                    </div>
+                                    <div class="col-12">
+                                        <span id="subtotal"style="color: red">00.0</span> Rs/=
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-4 mt-4">
+                                <button class="btn btn-success" id="btnSubmitOrder" type="button">Purchase</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <section class="order-table">
+            <div div class="col-md-12 mt-4" style="height:330px; overflow-y: scroll">
+                <table class="table table-bordered">
+                    <thead class="bg-danger text-white">
+                    <tr style="background-color:  #EC9463">
+                        <th>Id</th>
+                        <th>Code</th>
+                        <th>Description</th>
+                        <th>Unit Prince</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblOrder">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+</main>
+
+<!-- order-detail
+   ============================================= -->
+<main id="orderDetailContent">
+    <section class="main-section">
+        <section class="item-head">
+            <ul class="breadcrumb">
+                <img src="" width="35px">
+                <li><a href="#">Dashboard /</a></li>
+                <li class="active"> Order-Detail</li>
+            </ul>
+        </section>
+
+        <section class="Order-Detail">
+            <div div class="col-md-12 mt-4" style="height:430px; overflow-y: scroll">
+                <table class="table table-bordered">
+                    <thead class="bg-danger text-white">
+                    <tr style="background-color:  #EC9463" >
+                        <th>OrderId</th>
+                        <th>Date</th>
+                        <th>Cus Id</th>
+                        <th>Item Code</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tblOrderDetail">
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </section>
+</main>
+
+
+
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<!--main content-->
+<script src="pos/db/db.js"></script>
+<script src="pos/controller/DashboardController.js"></script>
+<script src="pos/controller/CustomerController.js"></script>
+<script src="pos/controller/ItemController.js"></script>
+<script src="pos/controller/PurchaseOrderController.js"></script>
+<script src="pos/controller/OrderDetailController.js"></script>
+
+<!--model content-->
+<script src="pos/model/Customer.js"></script>
+<script src="pos/model/Item.js"></script>
+<script src="pos/model/Order.js"></script>
+    <script src="pos/model/OrderDetail.js"></script>
+
+
+<!--validation-->
+<script src="pos/validation/CustomerValidation.js"></script>
+<script src="pos/validation/ItemValidation.js"></script>
+</body>
+</html>

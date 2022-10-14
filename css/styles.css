@@ -1,0 +1,2194 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Inter ;
+    box-sizing: border-box;
+}
+header{
+    background: #BA883C;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 78px;
+    z-index: 2;
+}
+nav{
+    position: absolute;
+    top: 0;
+    right: 30px;
+}
+nav>ul>li{
+    display: inline-block;
+    padding: 30px;
+    font-size: 20px;
+}
+nav>ul>li>a{
+    color: white;
+    text-decoration: none;
+
+}
+nav>ul>li>a:hover{
+    color: #ff253a;
+    transition: .4s;
+
+}
+.main-image img{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: 80px;
+    top: 70px;
+    border-radius: 50%;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #E3D5C0;
+    margin-top: 73px;
+}
+.main-box{
+    width: 700px;
+    height: 500px;
+    background: #EFE3D5;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+.main-box h3:first-child {
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    font-size: 40px;
+    color: #43270E;
+}
+.main-box h2{
+    position: absolute;
+    top:30%;
+    left: 16%;
+    font-size: 50px;
+    font-weight: bold;
+
+
+}
+.main-box h3:last-child{
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #43270E;
+
+}
+
+.hero aside{
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+
+}
+.hero aside i{
+    font-size: 50px;
+    margin: 22px 22px;
+
+}
+.hero aside i:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
+.hero aside h4 {
+    font-size: 30px;
+    margin: 0px 130px;
+}
+.about-me{
+    width: 100%;
+    padding: 100px 0px;
+    background: #E3D5C0;
+
+
+
+}
+.main-about h2{
+    color: black;
+    font-size: 50px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: back;
+
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+        font-size: 20px;
+    }
+
+}
+.about-box img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+.about-box {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.about-text{
+    width: 500px;
+
+}
+.about-text p{
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    color: #43270E;
+}
+.main-about p:nth-child(2){
+    font-size: 30px;
+    width: 700px;
+    height: 70px;
+    position: relative;
+    left: 150px;
+    color: #43270E;
+    font-weight: bold;
+}
+.main-about p:last-child{
+    font-size: 20px;
+    width: 700px;
+    height: 70px;
+    position: relative;
+    left: 230px;
+    color: black;
+    font-weight: bold;
+}
+.about-text button{
+    background-color:#694B1D;
+    color: black;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    margin-left: 200px;
+}
+.name-box{
+    width: 500px;
+    height: 200px;
+    background: linear-gradient(180deg, #EB9C3F 0%, rgba(239, 227, 213, 0) 100%);
+    margin-left: 120px;
+}
+tr td:first-child{
+    padding-right: 20px;
+
+}
+tr td{
+    padding-top: 50px;
+    font-size: 20px;
+}
+.myskills-text h2{
+    color: black;
+    font-size: 50px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: back;
+
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+        font-size: 20px;
+    }
+
+}
+.skill{
+    width: 100%;
+    padding: 100px 0px;
+    background: #E3D5C0;
+
+}
+.skill section:nth-child(2){
+    width: 900px;
+    height: 400px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns:repeat(4,1fr);
+    gap: 50px;
+}
+.skill section:nth-child(2) div{
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.50);
+    background: linear-gradient(180deg, #7C6243 0%, rgba(124, 98, 67, 0) 100%);
+
+}
+.skill-deatail img{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 30px;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    margin: auto;
+
+}
+.skill-deatail div h4{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    left:60px;
+    top: 20px;
+    font-size: 20px;
+
+
+}
+.skill-deatail div h5{
+    position: relative;
+    left:80px;
+    top: 20px;
+    font-size: 20px;
+}
+.skill-deatail div:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
+.button-read .button{
+    background-color:#694B1D;
+    color: black;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    margin-left: 600px;
+    margin-bottom: 30px;
+    top: 54px;
+    position: relative;
+
+
+}
+.tools{
+    width: 100%;
+    padding: 100px 0px;
+    background: #E3D5C0;
+
+}
+.tools-image h2{
+    color:#694B1D;
+    font-size: 30px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.tools-box{
+    border-radius: 20px;
+    margin: 50px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+.tools-box img{
+    width: 5%;
+    height: 10%;
+    margin: 50px 52px;
+    transition: transform .4s;
+
+}
+
+.tools-box img:hover{
+    transform: scale(2);
+}
+.services{
+    width: 100%;
+    padding: 100px 0px;
+    background: #E3D5C0;
+
+}
+.my-services h2{
+    color: black;
+    font-size: 50px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: back;
+
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+        font-size: 20px;
+    }
+
+}
+
+.service-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+
+}
+.service2-box{
+    height: 528px;
+    width: 500px;
+    padding: 20px 35px;
+    background: #E3D5C0;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.service2-box img {
+    width:150px;
+    height: 100px;
+    margin-bottom: 30px;
+    border-radius: 40%;
+}
+.service2-box h5{
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #694B1D;
+
+}
+.pra p{
+    line-height:20px;
+    margin-bottom: 35px;
+}
+.education{
+    width: 100%;
+    padding: 100px 0px;
+    background: #E3D5C0;
+
+}
+.education-text h2{
+    color: black;
+    font-size: 50px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: back;
+
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+        font-size: 20px;
+    }
+
+}
+.education-box{
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    top: 0;
+    right:0;
+    bottom: 0;
+    margin: auto;
+    background: linear-gradient(180deg, #59412B 0%, rgba(224, 146, 74, 0.598958) 60.42%, rgba(217, 217, 217, 0) 100%);
+}
+.edu-box1, .edu-box2, .edu-box3{
+    height: 150px;
+    width: 450px;
+    padding: 16px 17px 35px;
+    background: #EFE3D5;
+    border-radius: 20px;
+    margin: 50px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+.edu-box2{
+    position: relative;
+    align-self: self-end;
+    margin-left: 40px;
+}
+.education-box{
+    width: 1200px;
+    height: 500px;
+    max-width: 95%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edu-box1{
+    align-self: self-start;
+}
+.edu-box2{
+    align-self: self-start;
+}
+.edu-box3{
+    align-self: self-end;
+}
+.projects{
+    width: 100%;
+    padding: 100px 0px;
+    background: #E3D5C0;
+
+}
+.projects-text h2{
+    color: black;
+    font-size: 50px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: back;
+
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+        font-size: 20px;
+    }
+
+}.hero aside {
+     position: absolute;
+     /* bottom: 30%; */
+     bottom: 40%;
+     right: 10%;
+ }
+.projects-detail{
+    display: flex;
+    font-size: 25px;
+    color: #694B1D;
+    padding: 50px 60px;
+    letter-spacing: 3px;
+}
+.my-projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.system{
+    height: 300px;
+    width: 400px;
+    padding: 20px 35px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    margin: 25px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+.system img{
+    width:300px;
+    height: 200px;
+
+}
+.my-projects img:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
+.button-view .button{
+    background-color:#694B1D;
+    color: black;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    margin-left: 600px;
+    margin-bottom: 30px;
+    top: -44px;
+    position: relative;
+
+}
+.git-paragrah p:nth-child(1){
+    font-size: 30px;
+    color: black;
+    margin-bottom: 70px;
+    padding-left: 200px;
+
+}
+.git-button .gitbut{
+    background-color:#D49330;
+    color: black;
+    text-decoration: none;
+    border: 0px solid transparent;
+    font-weight: bold;
+    padding: 20px 35px;
+    border-radius: 20px;
+    transition: .4s;
+    margin-left: 300px;
+    font-size: 20px;
+}
+.contacts{
+    width: 100%;
+    padding: 100px 0px;
+    background: #E3D5C0;
+
+}
+.contacts-text h2{
+    color: black;
+    font-size: 50px;
+    width: 1130px;
+    margin: 10px auto;
+    text-align: center;
+    padding-bottom: 50px;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: back;
+
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+        font-size: 20px;
+    }
+
+}
+
+.contacts-box {
+    width: 1200px;
+    height: 950px;
+    position: relative;
+    border-radius: 10%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: linear-gradient(180deg, #B4977C 0%, rgba(108, 78, 51, 0) 77.08%);
+
+}
+.box-1 i .icon-text h3{
+    font-size: 50px;
+    margin: 200px 90px;
+    bottom: 55px;
+    margin-bottom: -10px;
+    color: black;
+    font-size: 20px;
+    width: 820px;
+    margin: 20px auto;
+    margin-top: -39px;
+    top: 10px;
+}
+.box-1 i{
+    font-size: 40px;
+    margin-top: 40px;
+}
+.icon-text h3{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.container .antima .box-1{
+    position: relative;
+    padding: 10px 10px;
+    display: flex;
+
+}
+
+
+
+.box-1 i:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+
+.contactForm{
+    width: 40%;
+    height: 40%;
+
+
+}
+.contactForm label{
+    font-size: 30px;
+    color: black;
+    font-weight: 300;
+
+}
+#input01, #input02, #input03, #input04{
+    width: 70%;
+    padding: 12px;
+    border: 1px solid  #6694d0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background: #D9D9D9;
+    display: flex;
+    margin-left:150px;
+}
+.contactForm button{
+    background-color:#796728;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 35px;
+    border-radius: 20px;
+    transition: .4s;
+    margin-left:200px;
+    margin-top: 50px;
+
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.contact-me p{
+    font-size: 30px;
+    margin-left: 30px;
+}
+.contact-me img{
+    margin-left:200px;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+.contact-me img:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #BA883C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer p:nth-child(1){
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+footer p:nth-child(2){
+    color: black;
+    font-size: 30px;
+    width: 1200px;
+    text-align: center;
+    line-height: 26px;
+}
+@media  screen and (max-width: 1440px) {
+    .button-read .button {
+        margin-left: 663px;
+    }
+}
+/*    .main-image img {*/
+
+/*        left: 182px;*/
+/*    }*/
+
+/*    .main-box h2 {*/
+
+/*        left: 10%;*/
+/*    }*/
+
+/*    .main-about p:nth-child(2) {*/
+
+/*        left: 203px;*/
+/*    }*/
+
+/*    .main-about p:last-child {*/
+
+/*        left: 309px;*/
+/*    }*/
+
+/*    .name-box {*/
+
+/*        margin-left: 241px;*/
+/*    }*/
+
+/*    tr td:first-child {*/
+/*        padding-right: 122px;*/
+/*    }*/
+
+/*    .button-read .button {*/
+
+/*        margin-left: 744px;*/
+/*        top: 97px;*/
+
+/*    }*/
+
+/*    .projects-detail {*/
+
+/*        padding: 53px 208px;*/
+/*        margin-left: 80px;*/
+
+/*    }*/
+
+/*    .system {*/
+/*        height: 286px;*/
+/*        width: 329px;*/
+/*        margin: 16px;*/
+
+/*    }*/
+
+/*    .system img {*/
+/*        width: 211px;*/
+/*        height: 203px;*/
+/*    }*/
+
+/*    .button-view .button {*/
+
+/*        margin-left: 682px;*/
+
+/*    }*/
+
+/*    .git-paragrah p:nth-child(1) {*/
+
+/*        padding-left: 324px;*/
+/*    }*/
+
+/*    .contacts-box {*/
+/*        width: 1055px;*/
+/*        height: 941px;*/
+
+/*        left: 88px;*/
+/*    }*/
+
+/*    my-projects {*/
+
+/*        margin-left: 120px;*/
+/*    }*/
+
+/*    .education-box {*/
+/*        width: 1104px;*/
+/*        height: 510px;*/
+/*        left: 88px;*/
+
+/*    }*/
+
+/*    .main-about h2 {*/
+/*        margin-right: 79px;*/
+/*    }*/
+
+/*    .hero aside {*/
+/*        bottom: 40%;*/
+/*    }*/
+
+/*    .myskills-text h2 {*/
+/*        margin-right: 79px;*/
+/*    }*/
+
+/*    .skill section:nth-child(2) {*/
+/*        margin-right: 189px;*/
+/*    }*/
+
+/*    .service2-box {*/
+/*        height: 400px;*/
+/*        width: 238px;*/
+/*        margin: 19px;*/
+
+/*    }*/
+
+/*    .service-box {*/
+/*        margin-left: 130px;*/
+/*    }*/
+
+/*    .my-services h2 {*/
+/*        margin-right: 79px;*/
+/*    }*/
+
+/*    .education-text h2 {*/
+/*        margin-right: 79px;*/
+/*    }*/
+
+/*    .projects-text h2 {*/
+/*        margin-right: 79px;*/
+/*    }*/
+
+/*    .my-projects {*/
+
+/*        margin-left: 140px;*/
+/*    }*/
+
+/*    .contacts-text h2 {*/
+/*        margin-right: 79px;*/
+/*    }*/
+
+/*    .tools-image h2 {*/
+/*        margin-right: 79px;*/
+/*    }*/
+
+/*    .tools-box {*/
+/*        margin-left: 195px;*/
+/*        margin-right: 0px*/
+/*    }*/
+/*}*/
+@media  screen and (max-width: 1024px) {
+    .main-box h2 {
+        font-size: 40px;
+    }
+    .main-image img {
+        width: 332px;
+        height: 348px;
+        left: 36px;
+    }
+    .main-about h2 {
+        width: 996px;
+
+    }
+    .main-about p:nth-child(2) {
+        left: -4px;
+    }
+    .main-about p:last-child {
+        left: -5px;
+    }
+    .myskills-text h2 {
+
+        width: 948px;
+    }
+    .tools-image h2 {
+        width: 979px;
+    }
+    .my-services h2 {
+        width: 995px;
+    }
+    .service2-box {
+        width: 172px;
+    }
+    .education-text h2 {
+        width: 994px;
+    }
+    .education-box {
+        width: 986px;
+        left: -2px;
+    }
+     .edu-box2 {
+         height: 150px;
+         width: 261px;
+     }
+    .edu-box2 {
+        margin-left: -98px;
+    }
+    .projects-text h2 {
+        width: 990px;
+    }
+    .system {
+        width: 235px;
+        margin: 44px;
+    }
+    .contacts-text h2 {
+        width: 984px;
+    }
+    .contacts-box {
+        left: -40px
+    }
+    footer p:nth-child(2) {
+        width: 1009px;
+    }
+    .main-box {
+        width: 648px;
+        height: 471px;
+
+    }
+
+    .hero aside {
+        bottom: 30%;
+    }
+
+    .about-box img {
+        width: 380px;
+        height: 385px;
+    }
+    .main-about p:nth-child(2) {
+        left: -24px;
+    }
+.main-about p:last-child {
+    left: -73px;
+}
+.tools-image h2 {
+    width: 920px;
+}
+
+    .name-box {
+        width: 453px;
+        height: 236px;
+        margin-left: 125px;
+    }
+    .main-about p:nth-child(2) {
+        left: 49px;
+    }
+    .main-about p:last-child {
+        left: 110px;
+    }
+    .main-about h2 {
+        width: 1019px;
+        font-size: 40px;
+    }
+    .myskills-text h2 {
+        width: 1019px;
+        font-size: 40px;
+    }
+    .skill section:nth-child(2) {
+        margin-right: 64px;
+    }
+    .skill-deatail img {
+        width: 29px;
+        height: 44px;
+        left: 22px;
+    }
+    .skill-deatail div h5 {
+        position: relative;
+        left: 63px;
+        top: 20px;
+        font-size: 20px;
+    }
+    .button-read .button {
+        margin-left: 471px;
+    }
+    .tools-image h2 {
+        width: 1019px;
+        font-size: 30px;
+    }
+    .tools-box {
+        margin-left: 5px;
+    }
+    .my-services h2 {
+        width: 1019px;
+        font-size: 40px;
+    }
+    .service2-box h5 {
+        font-size: 20px;
+        margin-bottom: 54px;
+    }
+    .service-box {
+        margin-left: -73px;
+    }
+    .service2-box {
+        height: 548px;
+        width: 212px;
+        margin: 19px;
+        padding: -20px 35px;
+    }
+    .education-text h2 {
+        width: 1019px;
+        font-size: 40px;
+
+    }
+    .education-box {
+        width: 825px;
+    }
+    .edu-box1, .edu-box2, .edu-box3 {
+        height: 203px;
+        width: 214px;
+        padding: 2px 39px 23px;
+        margin: 43px;
+        font-size: 13px;
+    }
+    .projects-text h2 {
+        width: 1019px;
+        font-size: 40px;
+    }
+    .projects-detail {
+        padding: 56px 39px;
+        margin-left: 80px;
+        font-size: 23px;
+    }
+    .my-projects {
+        margin-left: -49px;
+    }
+    .system {
+        width: 204px;
+        margin: 53px;
+        margin-left: 44px;
+        height: 244px;
+    }
+    .system img {
+        width: 138px;
+        height: 140px;
+    }
+    .button-view .button {
+        margin-left: 450px;
+    }
+    .git-paragrah p:nth-child(1) {
+        padding-left: 83px;
+        font-size: 25px;
+    }
+    .contacts-text h2 {
+        width: 1019px;
+    }
+    .contacts-box {
+        width: 872px;
+        height: 941px;
+        left: -4px;
+    }
+    .contact-me p {
+        font-size: 25px;
+
+    }
+    .contact-me img {
+        margin-left: 161px;
+        margin-top: 75px;
+    }
+    footer p:nth-child(2) {
+
+        font-size: 20px;
+    }
+
+}
+@media  screen and (max-width: 768px) {
+    .main-about h2 {
+        width: 743px;
+        font-size: 30px;
+    }
+    .main-about p:nth-child(2) {
+        left: -2px;
+    }
+    .main-about p:last-child {
+        left: -10px;
+    }
+    .about-text {
+        width: 298px;
+    }
+    .about-text button {
+        margin-left: 128px;
+    }
+    .myskills-text h2 {
+        width: 750px;
+        font-size: 30px;
+    }
+    .skill section:nth-child(2) {
+        width: 703px;
+        height: 400px;
+    }
+    .tools-image h2 {
+        width: 742px;
+        font-size: 25px;
+    }
+    .my-services h2 {
+        width: 741px;
+        font-size: 30px;
+    }
+    .service2-box {
+        height: 548px;
+        width: 171px;
+    }
+    .education-text h2 {
+        width: 730px;
+        font-size: 30px;
+    }
+    .projects-text h2 {
+        width: 701px;
+        font-size: 30px;
+    }
+    .contacts-text h2 {
+        width: 714px;
+    }
+    .contacts-box {
+        width: 733px;
+    }
+    #input01, #input02, #input03, #input04 {
+        margin-left: 98px;
+    }
+    footer p:nth-child(2) {
+        width: 761px;
+    }
+
+    nav>ul>li {
+        padding: 20px;
+        font-size: 20px;
+    }
+    .main-box {
+        width: 488px;
+        height: 453px;
+
+    }
+    .main-image img {
+        width: 244px;
+        height: 243px;
+        left: 13px;
+    }
+    .main-box h3:first-child {
+        font-size: 30px;
+
+    }
+    .main-box h2 {
+
+        font-size: 30px;
+      left: 15%;
+    }
+    .main-box h3:last-child {
+        top: 40%;
+        right: 30%;
+        font-size: 20px;
+
+    }
+    .hero aside i {
+        font-size: 30px;
+        margin: 48px 25px;
+    }
+    .hero aside h4 {
+        font-size: 20px;
+        margin: -3px 154px;
+    }
+    .main-about h2 {
+        width: 761px;
+        font-size: 30px;
+    }
+    .main-about p:nth-child(2) {
+        left: 53px;
+        font-size: 25px;
+    }
+    .main-about p:last-child {
+        left: 62px;
+    }
+    .about-text p {
+        font-size: 18px;
+    }
+    .about-box img {
+        width: 278px;
+        height: 275px;
+        margin-bottom: 194px;
+        padding: 20px;
+    }
+    .name-box {
+        width: 406px;
+        height: 210px;
+        margin-left: 37px;
+    }
+    tr td {
+        padding-top: 50px;
+        font-size: 15px;
+    }
+    .about-text button {
+        padding: 10px 12px;
+
+    }
+    .myskills-text h2 {
+        font-size: 30px;
+        width: 761px;
+    }
+    .skill section:nth-child(2) {
+        width: 676px;
+        height: 288px;
+        gap: 29px;
+        margin-right: 43px
+    }
+    .skill-deatail div h5 {
+        left:23px;
+        top: -18px;
+        font-size: 15px;
+    }
+    .skill-deatail div h4 {
+        width: 70px;
+        height: 30px;
+        left: 23px;
+        font-size: 17px;
+    }
+
+    .button-read .button {
+        margin-left: 312px;
+    }
+    .tools-image h2 {
+        width: 761px;
+        font-size: 25px;
+    }
+    .tools-box {
+        margin: -13px;
+        margin-right: 0px;
+    }
+    .my-services h2 {
+        width: 761px;
+
+
+
+    }
+    .service2-box img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 30px;
+        border-radius: 40%;
+    }
+    .service2-box h5 {
+        font-size: 20px;
+        margin-bottom: 33px;
+    }
+    .service2-box {
+        height: 455px;
+        width: 500px;
+        margin: -24px;
+        font-size: 13px;
+        padding: 29px 10px;
+        margin: 15px;
+    }
+    .service-box {
+        margin-left: -19px;
+    }
+    .education-text h2 {
+        width: 761px;
+        font-size: 30px;
+    }
+    .education-box {
+        width: 602px;
+        height: 487px;
+        left: -7px;
+    }
+    .projects-text h2 {
+        width: 761px;
+        font-size: 30px;
+    }
+    .projects-detail {
+        padding: 67px 3px;
+        margin-left: 80px;
+        font-size: 20px;
+    }
+    .edu-box1, .edu-box2, .edu-box3 {
+        height: 200px;
+        width: 251px;
+        padding: -1px 39px 23px;
+        margin: 18px;
+        font-size: 13px;
+    }
+    .system img {
+        width: 102px;
+        height: 97px;
+    }
+    .system {
+        height: 202px;
+        width: 254px;
+        margin: 32px;
+    }
+    .my-projects {
+
+        height: 423px;
+
+    }
+    .system {
+        height: 172px;
+        width: 167px;
+        margin: 35px;
+        top:0;
+    }
+    .system img {
+        width: 91px;
+        height: 82px;
+    }
+    .system {
+
+        padding: 5px 37px;
+    }
+    .button-view .button {
+        margin-left: 320px;
+    }
+    .git-paragrah p:nth-child(1) {
+        padding-left: 40px;
+        font-size: 20px;
+
+    }
+    .git-button .gitbut {
+
+        padding: 10px 14px;
+        margin-left: 200px;
+        font-size: 20px;
+    }
+    .contacts-text h2 {
+        width: 761px;
+
+    }
+    .contacts-box {
+        width: 668px;
+        height: 844px;
+        left: 1px;
+    }
+    .box-1 i {
+        font-size: 25px;
+        margin-top: 22px;
+        padding: 20px;
+    }
+    #input01, #input02, #input03, #input04 {
+        padding: 4px;
+        margin-left: 30px;
+    }
+    .contactForm button {
+
+        padding: 4px 23px;
+
+
+        margin-left: 83px;
+
+    }
+    .contact-me p {
+        font-size: 20px;
+    }
+    .contact-me img {
+        margin-left: 98px;
+        margin-top: 71px;
+        width: 30px;
+    }
+
+    footer p:nth-child(1) {
+        font-size: 25px;
+
+    }
+}
+@media  screen and (max-width: 425px) {
+    .main-about h2 {
+        width: 261px;
+    }
+
+    .main-about p:nth-child(2) {
+        left: -337px;
+
+    }
+
+    .main-about p:last-child {
+        left: -327px;
+    }
+
+    .about-text {
+        width: 119px;
+    }
+
+    .about-text button {
+        margin-left: -32px;
+    }
+
+    .name-box {
+        width: 353px;
+    }
+
+    .myskills-text h2 {
+        width: 256px;
+    }
+
+    .skill section:nth-child(2) {
+        width: 399px;
+    }
+
+    .tools-image h2 {
+        width: 256px;
+    }
+
+    .my-services h2 {
+        width: 244px;
+    }
+
+    .service2-box {
+
+        width: 74px;
+        margin: -24px;
+    }
+
+    .education-text h2 {
+        width: 310px;
+    }
+
+    .edu-box2, .edu-box3 {
+        width: 69px;
+    }
+
+    .projects-text h2 {
+        width: 416px;
+    }
+
+    .system {
+        width: 86px;
+    }
+
+    .contacts-text h2 {
+        width: 355px;
+    }
+
+    .contacts-box {
+        width: 383px;
+        height: 844px;
+        left: 1px;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .contactForm button {
+        margin-left: -9px;
+    }
+
+    footer p:nth-child(2) {
+        width: 407px;
+    }
+
+    nav > ul > li {
+        padding: 10px;
+        font-size: 10px;
+        padding-top: 27px;
+    }
+
+    .main-box {
+        width: 234px;
+        height: 365px;
+    }
+
+    .main-box h2 {
+        font-size: 18px;
+        margin: -27px;
+    }
+
+    .main-box h3:first-child {
+        font-size: 18px;
+    }
+
+    .main-box h3:last-child {
+        font-size: 15px;
+        margin: -49px;
+        margin-top: -21px;
+    }
+
+    .main-image img {
+        width: 181px;
+        height: 193px;
+        left: 2px;
+    }
+
+    .hero aside i {
+        font-size: 20px;
+        margin: -19px 9px;
+        margin-right: 0px;
+    }
+
+    .hero aside h4 {
+        font-size: 15px;
+        margin: 28px 44px;
+        padding: 16px;
+    }
+
+    .main-about h2 {
+        font-size: 30px;
+    }
+
+    .main-about p:nth-child(2) {
+        left: -313px;
+        right: -1141px;
+        font-size: 17px;
+        padding-left: 365px;
+    }
+
+    .main-about p:last-child {
+        left: -327px;
+        padding-left: 362px;
+        font-size: 15px;
+    }
+
+    .about-box img {
+        width: 218px;
+        height: 226px;
+        margin-bottom: 1119px;
+        padding: 11px;
+    }
+
+    .about-text {
+        width: 277px;
+        height: 1219px;
+
+    }
+
+    .about-text button {
+        margin-left: -95px;
+    }
+
+    .about-text p {
+        font-size: 13px;
+    }
+
+    tr td {
+        padding-top: 20px;
+        font-size: 13px;
+    }
+
+    .name-box {
+        width: 248px;
+        height: 144px;
+    }
+
+    .name-box {
+        width: 149px;
+        height: 178px;
+        margin-top: -955px;
+        padding-top: 3px;
+        padding-bottom: 59px;
+
+    }
+
+    tr td:first-child {
+        padding-right: 10px;
+    }
+
+    .myskills-text h2 {
+        font-size: 20px;
+
+    }
+
+    .skill-deatail img {
+        width: 21px;
+        height: 20px;
+        left: 11px;
+    }
+
+    .skill-deatail div h5 {
+        left: 13px;
+        top: 6px;
+        font-size: 10px;
+    }
+
+    .skill-deatail div h4 {
+        width: 47px;
+        height: 33px;
+        left: 4px;
+        font-size: 13px;
+    }
+
+    .skill section:nth-child(2) {
+        width: 394px;
+        height: 255px;
+        gap: 28px;
+        margin-right: 15px;
+    }
+
+    .button-read .button {
+        margin-left: 149px;
+    }
+
+    .tools-image h2 {
+
+        font-size: 20px;
+    }
+
+    .my-services h2 {
+        font-size: 20px;
+    }
+
+    .service2-box img {
+        width: 59px;
+        height: 69px;
+        margin-bottom: 16px;
+
+    }
+
+    .service2-box h5 {
+        font-size: 11px;
+        margin-bottom: 47px;
+    }
+
+    .service2-box {
+
+        font-size: 10px;
+        padding: 35px 33px;
+        width: 142px;
+        margin: -21px;
+    }
+
+    .education-text h2 {
+        width: 310px;
+        font-size: 20px;
+    }
+
+    .education-box {
+        width: 386px;
+        height: 485px;
+        left: -2px;
+        max-width: 75%;
+    }
+
+    .edu-box2, .edu-box3 {
+        width: 398px;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-top: 3px;
+        padding-bottom: 9px;
+    }
+
+    .edu-box3 {
+        height: 186px;
+        width: 368px;
+        margin-top: 32px;
+        margin-right: 0px;
+        margin-left: 30px;
+        padding-top: 25px;
+        margin-bottom: 0px;
+    }
+
+    .edu-box2 {
+        width: 398px;
+        margin-right: 27px;
+        margin-bottom: 1px;
+        margin-top: 27px;
+        padding-left: 13px;
+        padding-right: 73px;
+        padding-bottom: 12px;
+        padding-top: 13px;
+        margin-right: 64px;
+        font-size: 10px;
+    }
+
+
+    .edu-box1 {
+        height: 200px;
+        width: 310px;
+        padding: -1px 39px 23px;
+        margin: 26px;
+        font-size: 10px;
+        padding-right: 70px;
+        padding-bottom: 68px;
+        top: 1px;
+        left: 36px;
+        padding-top: 16px;
+        padding-left: 21px;
+    }
+
+
+    .edu-box3 {
+        height: 202px;
+        width: 400px;
+        margin-top: 32px;
+        margin-right: 0px;
+        margin-left: 22px;
+        padding-top: -5px;
+        margin-bottom: 33px;
+        margin-right: 20px;
+        padding-right: 69px;
+        padding-top: 1px;
+        padding-left: 20px;
+        margin-left: 24px;
+        margin-top: 48px;
+        margin-bottom: 41px;
+        margin-right: 9px;
+        font-size: 9px;
+
+    }
+
+    .edu-box3 h2 {
+        font-size: 10px;
+    }
+
+    .projects-text h2 {
+        font-size: 20px;
+    }
+
+    .projects-detail {
+        font-size: 15px;
+        margin-left: 33px;
+        padding-top: 83px;
+        padding-bottom: 0px;
+    }
+
+    .system {
+        width: 98px;
+        height: 176px;
+        margin: 8px;
+        top: 0;
+    }
+
+    .system img {
+        width: 72px;
+        height: 64px;
+        padding-right: 18px;
+    }
+
+    h3 {
+        padding-right: 22px;
+        padding-top: 15px;
+        padding-left: 0px;
+        border-left-width: 38px;
+        margin-left: 0px;
+        border-right-width: 67px;
+        font-size: 15px;
+    }
+
+    .button-view .button {
+
+        padding: 5px 17px;
+        border-radius: 30px;
+        margin-bottom: 30px;
+        top: -82px;
+        position: relative;
+        margin-left: 138px;
+    }
+
+    .git-paragrah p:nth-child(1) {
+        padding-left: 24px;
+        font-size: 15px;
+    }
+
+    .git-button .gitbut {
+        padding: 40px 8px;
+        margin-left: 70px;
+        border-right-width: 0px;
+        padding-bottom: 0px;
+        padding-top: 7px;
+        font-size: 15px;
+    }
+
+    .contacts-text h2 {
+        font-size: 20px;
+    }
+
+    .contacts-box {
+        width: 345px;
+        height: 794px;
+        left: 2px;
+    }
+
+    .icon-text h3 {
+        font-size: 13px;
+        margin-top: 24px;
+        margin-left: 8px;
+    }
+
+    .box-1 i {
+        font-size: 25px;
+        margin-top: 12px;
+        padding: 31px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #input01, #input02, #input03, #input04 {
+        width: 120%;
+        margin-left: 0px;
+    }
+    .contactForm button {
+        margin-top: 28px;
+    }
+    .contact-me p {
+        font-size: 15px;
+        padding-top: 25px;
+        margin-left: 13px;
+    }
+    .contact-me img {
+        margin-left: 49px;
+        margin-top: 36px;
+        width: 30px;
+    }
+    footer p:nth-child(1) {
+        font-size: 18px;
+    }
+    footer p:nth-child(2) {
+        width: 404px;
+        font-size: 18px;
+    }
+    .tools-box img {
+        width: 10%;
+    }
+}
+@media  screen and (max-width: 375px) {
+    .main-about p:nth-child(2) {
+        left: -338px;
+    }
+    .about-text {
+        width: 118px;
+    }
+    .skill section:nth-child(2) {
+        width: 362px;
+    }
+    .service2-box {
+        width: 112px;
+
+    }
+    .education-box {
+        width: 168px;
+        height: 487px;
+        left: -48px;
+        max-width: 30%;
+    }
+    .edu-box3 {
+        width: 196px;
+}
+    .edu-box2 {
+        width: 145px;
+    }
+    .projects-text h2 {
+        width: 348px;
+    }
+    footer p:nth-child(2) {
+        width: 362px;
+    }
+    .main-box {
+        width: 215px;
+        height: 368px;
+    }
+    .main-box h3:last-child {
+        font-size: 14px;
+        margin: -58px;
+        margin-top: -34px;
+    }
+    .hero aside i {
+        font-size: 18px;
+        margin: -20px 16px;
+
+    }
+    .hero aside i {
+        font-size: 18px;
+        margin: -7px -8px 12px;
+
+        padding-left: 29px;
+    }
+    .hero aside h4 {
+        font-size: 15px;
+        margin: 29px 46px;
+        padding: 6px;
+    }
+    nav > ul > li {
+        padding: 6px;
+        font-size: 10px;
+        padding-top: 27px;
+    }
+    .main-image img {
+        width: 150px;
+        height: 158px;
+        left: 2px;
+    }
+    .skill {
+        padding: 476px 0px;
+    }
+    .about-text button {
+        margin-left: -128px;
+        padding: 3px 12px;
+    }
+    .skill section:nth-child(2) {
+        width: 347px;
+    }
+    .button-read .button {
+        margin-left: 112px;
+        padding: 4px 30px;
+    }
+    .tools {
+        width: 100%;
+        padding: 6px 13px;
+    }
+    .tools-box img {
+        width: 10%;
+    }
+    .service2-box img {
+        width: 49px;
+        height: 59px;
+        margin-bottom: 16px;
+    }
+    .service2-box {
+        width: 130px;
+    }
+    .service2-box h5 {
+        font-size: 11px;
+        margin-bottom: 52px;
+        padding-top: 0px;
+        padding-right: 20px;
+    }
+    .education-box {
+        width: 306px;
+        height: 478px;
+        left: 0px;
+        max-width: 85%;
+    }
+    .education-box h3 {
+        padding-right: 17px;
+        padding-top: 11px;
+        padding-left: -10px;
+        border-left-width: 35px;
+        margin-left: 0px;
+        border-right-width: 67px;
+        font-size: 13px;
+    }
+    .edu-box3 img{
+        height: 20px;
+        width: 20px;
+    }
+    .edu-box2 img {
+        height: 23px;
+        width: 28px;
+}
+    .edu-box1 img {
+        height: 23px;
+        width: 28px;
+    }
+    .projects-detail {
+        font-size: 13px;
+        margin-left: 15px;
+        padding-top: 42px;
+
+    }
+    .my-projects {
+        margin-left: -21px;
+    }
+    .git-button .gitbut {
+        margin-left: 58px;
+}
+    footer p:nth-child(2) {
+        font-size: 15px;
+    }
+
+}
+@media  screen and (max-width: 320px) {
+    .main-about p:nth-child(2) {
+        left: -399px;
+    }
+    .main-about p:last-child {
+        left: -391px;
+    }
+    .about-text {
+        width: 84px;
+    }
+    .skill section:nth-child(2) {
+        width: 303px;
+    }
+    .service2-box {
+        width: 109px;
+    }
+    .education-box {
+        left: -75px;
+    }
+    .projects-text h2 {
+        width: 299px;
+    }
+    .contacts-text h2 {
+        width: 319px;
+    }
+    .contacts-box {
+        width: 300px;
+    }
+    footer p:nth-child(2) {
+        width: 305px;
+    }
+    nav > ul > li {
+        padding: 4px;
+        font-size: 10px;
+        padding-top: 30px;
+    }
+    .main-box {
+        width: 190px;
+        height: 351px;
+    }
+    .main-box h3:first-child {
+        font-size: 15px;
+    }
+    .main-box h2 {
+        font-size: 15px;
+        margin: -16px;
+    }
+    .main-box h3:last-child {
+        font-size: 13px;
+        margin: -57px;
+        margin-top: -34px;
+    }
+    .hero aside i {
+        font-size: 15px;
+        margin: -7px -7px 12px;
+        padding-left: 33px;
+        padding-left: 27px;
+    }
+    .hero aside h4 {
+        font-size: 15px;
+        margin: 29px 46px;
+        padding: 4px;
+        argin-right: 25px;
+        margin-top: 34px;
+        margin-bottom: 57px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+    .main-image img {
+        width: 124px;
+        height: 140px;
+        left: 2px;
+    }
+    .main-about h2 {
+        font-size: 25px;
+    }
+    .main-about p:nth-child(2) {
+        left: -380px;
+        font-size: 15px;
+        padding-left: 401px;
+
+    }
+    .main-about p:last-child {
+        left: -381px;
+        padding-left: 400px;
+        font-size: 14px;
+    }
+    .about-box img {
+        width: 195px;
+        height: 196px;
+}
+    .about-text button {
+        margin-left: -128px;
+        padding: 0px 12px;
+    }
+    .skill {
+        padding: 792px 0px;
+    }
+    .myskills-text h2 {
+        font-size: 25px;
+    }
+    .skill-deatail div h4 {
+        width: 52px;
+        height: 27px;
+        left: 3px;
+        font-size: 11px;
+    }
+    .skill section:nth-child(2) {
+        width: 296px;
+        gap: 19px;
+}
+    .button-read .button {
+        margin-left: 85px;
+        padding: 0px 30px;
+    }
+    .service-box img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .service2-box {
+        width: 114px;
+        font-size: 10px;
+        padding: 33px 23px;
+
+    }
+    .service2-box h5 {
+        font-size: 10px;
+    }
+    .education-box {
+        left: 0px;
+        max-width: 80%;
+    }
+    .edu-box1 {
+        height: 200px;
+        width: 310px;
+        padding: -1px 39px 23px;
+        margin: 26px;
+        font-size: 10px;
+        padding-right: 62px;
+        padding-bottom: 68px;
+        top: 1px;
+        left: 64px;
+        padding-top: 16px;
+        padding-left: 21px;
+    }
+    .edu-box2 {
+        width: 398px;
+        margin-right: 27px;
+        margin-bottom: 4px;
+        margin-top: 24px;
+        padding-left: 12px;
+        padding-right: 65px;
+        padding-bottom: 12px;
+        padding-top: 13px;
+        margin-right: 92px;
+        font-size: 10px;
+    }
+    .projects-detail {
+        font-size: 12px;
+        margin-left: 7px;
+}
+    .system img {
+        width: 59px;
+        height: 64px;
+        padding-right: 18px;
+    }
+    .system h3 {
+        padding-right: 45px;
+        padding-top: 25px;
+        padding-left: -39px;
+        border-left-width: 68px;
+        margin-left: -14px;
+        border-right-width: 67px;
+        font-size: 13px;
+    }
+    .my-projects {
+        margin-left: -1px;
+    }
+    .button-view .button {
+        padding: 2px 17px;
+        margin-left: 106px;
+    }
+    .git-paragrah p:nth-child(1) {
+        padding-left: 15px;
+        font-size: 13px;
+    }
+    .git-button .gitbut {
+        margin-left: 36px;
+    }
+    .container .antima .box-1 {
+        padding: -10px 7px;
+    }
+    .contact-me img {
+        margin-left: 49px;
+        margin-top: 36px;
+        width: 20px;
+    }
+    .box-1 i {
+        font-size: 18px;
+        margin-top: -1px;
+        padding: 29px;
+        width: 35px;
+        height: 26px;
+    }
+    .icon-text h3 {
+        font-size: 12px;
+        margin-top: 8px;
+        margin-left: -5px;
+    }
+    .contact-me p {
+        font-size: 13px;
+    }
+    footer p:nth-child(1) {
+        font-size: 15px;
+    }
+    footer p:nth-child(2) {
+        font-size: 12px;
+    }
+}
