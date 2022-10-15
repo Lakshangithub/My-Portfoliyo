@@ -4,7 +4,7 @@ Site Map URL :https://www.gloomaps.com/zbkYRzWocP
 
 Wire-frame URL :https://wireframe.cc/dqpwER
 
-Mock-up URL :https://www.figma.com/file/CYeeEKJmia4NAbQ7QYMA1B/Untitled?node-id=2%3A2
+Mock-up URL :https://www.figma.com/file/2PLhrFeXqiyvVT9lMVOqgG/Untitled?node-id=0%3A1
 
 
 # POS-System
