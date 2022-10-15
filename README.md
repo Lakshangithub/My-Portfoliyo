@@ -11,6 +11,7 @@ Mock-up URL :https://www.figma.com/file/2PLhrFeXqiyvVT9lMVOqgG/Untitled?node-id=
 
 # POS-System
 
+![convert-calculator_00000](https://user-images.githubusercontent.com/101171034/195997696-1732bfaf-cf03-4aae-9813-b66a90958b0c.gif)
 
 Site Map URL :https://www.gloomaps.com/4stlCY3qV4
 
