@@ -13,7 +13,6 @@ Mock-up URL :http://localhost:63342/intarnet%20technologi/index.html?_ijt=bqlihc
 
 # POS-System
 
-==============================================================================================================================
 
 Site Map URL :https://www.gloomaps.com/4stlCY3qV4
 
