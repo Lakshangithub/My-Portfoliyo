@@ -9,7 +9,7 @@ Wire-frame URL :https://wireframe.cc/dqpwER
 
 Mock-up URL :https://www.figma.com/file/2PLhrFeXqiyvVT9lMVOqgG/Untitled?node-id=0%3A1
 
-Mock-up URL :http://localhost:63342/intarnet%20technologi/index.html?_ijt=d9ra22cflkff518cpb3svi63f4
+Mock-up URL :http://localhost:63342/intarnet technologi/index.html?_ijt=bqlihcrgmdv2km0smvsme5j6n3
 
 # POS-System
 
