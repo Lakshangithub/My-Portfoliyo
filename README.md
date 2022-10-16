@@ -13,7 +13,6 @@ Mock-up URL :http://localhost:63342/intarnet%20technologi/index.html?_ijt=bqlihc
 
 # POS-System
 
-![convert-calculator_00000](https://user-images.githubusercontent.com/101171034/195997696-1732bfaf-cf03-4aae-9813-b66a90958b0c.gif)
 =========================================================================================================================================================================
 
 Site Map URL :https://www.gloomaps.com/4stlCY3qV4
