@@ -9,6 +9,8 @@ Wire-frame URL :https://wireframe.cc/dqpwER
 
 Mock-up URL :https://www.figma.com/file/2PLhrFeXqiyvVT9lMVOqgG/Untitled?node-id=0%3A1
 
+Mock-up URL :https://github.com/Lakshangithub/My-Portfoliyo/blob/master/index.html
+
 
 # POS-System
 
