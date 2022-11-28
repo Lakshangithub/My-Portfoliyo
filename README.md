@@ -9,11 +9,10 @@ Wire-frame URL :https://wireframe.cc/dqpwER
 
 Mock-up URL :https://www.figma.com/file/2PLhrFeXqiyvVT9lMVOqgG/Untitled?node-id=0%3A1
 
+Mock-up URL :http://localhost:63342/intarnet%20technologi/index.html?_ijt=bqlihcrgmdv2km0smvsme5j6n3
 
 # POS-System
 
-![convert-calculator_00000](https://user-images.githubusercontent.com/101171034/195997696-1732bfaf-cf03-4aae-9813-b66a90958b0c.gif)
-=========================================================================================================================================================================
 
 Site Map URL :https://www.gloomaps.com/4stlCY3qV4
 
