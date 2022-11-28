@@ -1,0 +1,10 @@
+.body {
+    margin: 0px;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url("Resources/background1.jpg");
+    background-size: cover;
+}
