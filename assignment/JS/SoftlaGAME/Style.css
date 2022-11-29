@@ -10,11 +10,26 @@
     
     background-image: url(resources/background_.jpg);
     background-size: cover;
+    background-repeat: repeat-x;
+    overflow-x: hidden;
+    position: absolute;
 }
 
 .boy {
-    height: 300px;
-    margin-top: 272px;
+    height: 260px;
+    margin-top: 306px;
     position: absolute;
+}
+
+.box {
+    width: 240px;
+    height: 200px;
+   /* background-color: brown; */
+    position: absolute;
+    margin-top: 410px;
+    background-image: url(resources/ComplexRegalGelding.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
 }
     
