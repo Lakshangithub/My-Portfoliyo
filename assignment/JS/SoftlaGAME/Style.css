@@ -1,17 +1,18 @@
-.body{
+.body {
+
     margin: 0px;
 }
 
-.background{
+.background {
+
     width: 100%;
     height: 100vh;
-    background-image: url("Resources/vecteezy_forest-game-background_.jpg");
-    background-size:  cover;
     
+    background-image: url(resources/background_.jpg);
+    background-size: cover;
 }
 
-.boy{
+.boy {
     height: 300px;
-    margin-top: 272px;
-    position: absolute;
+    margin: 282px;
 }
