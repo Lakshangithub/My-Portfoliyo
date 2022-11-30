@@ -1,3 +1,19 @@
+.b1 {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+.s1{
+    position: relative;
+    font-family: "Broadway";
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
 .body {
 
     margin: 0px;
@@ -39,5 +55,42 @@
     margin-left: 30px;
     margin-top: 20px;
     position: absolute;
+}
+
+.b1 {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+.s1{
+    position: relative;
+    font-family: "Broadway";
+    text-transform: uppercase;
+    font-size: 9em;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg,rgb(255,0,0),#fff,rgb(255,0,0));
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    animation: animateMiniGame 4s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(1, 41, 239, 0);
+
+}
+
+@keyframes animateMiniGame {
+    0% {
+        background-position: 500%;
+
+    }
+    50%{
+        background-position: -500%;
+    }
+    100%{
+        background-position: 900;
+    }
 }
     
