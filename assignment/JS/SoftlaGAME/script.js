@@ -44,19 +44,19 @@ function runAnimationStart(){
 
 jumpImageNumber = 1;
 jumpAnimationNumber = 0;
-boyMarginTop = 310;
+boyMarginTop = 347;
 
 function jumpAnimation(){
 
     jumpImageNumber = jumpImageNumber + 1;
 
     if (jumpImageNumber <= 6){
-        boyMarginTop = boyMarginTop - 25;
+        boyMarginTop = boyMarginTop - 35;
         boy.style.marginTop = boyMarginTop + "px";
     }
 
     if (jumpImageNumber >= 7) {
-        boyMarginTop = boyMarginTop + 25;
+        boyMarginTop = boyMarginTop + 35;
         boy.style.marginTop = boyMarginTop + "px";
     }
 
@@ -97,11 +97,12 @@ function KeyCheck(event){
         if(moveBackgroundAnimationId == 0){
          moveBackgroundAnimationId = setInterval(moveBackground,100);
        
-        }    
-
+        } 
         if(boxAnimationId==0){
             boxAnimationId = setInterval(boxAnimation,100);
-        }
+        }   
+
+    
         
     }
 
@@ -110,13 +111,14 @@ function KeyCheck(event){
         if(jumpAnimationNumber == 0){
             jumpAnimationStart();
         }
-    }
-    if(moveBackgroundAnimationId == 0){
-       moveBackgroundAnimationId = setInterval(moveBackground,100); 
-    }  
-    if(boxAnimationId==0){
-        boxAnimationId = setInterval(boxAnimation,100);
-    }
+       if(moveBackgroundAnimationId == 0){
+            moveBackgroundAnimationId = setInterval(moveBackground,100); 
+
+        }  
+        if(boxAnimationId==0){
+            boxAnimationId = setInterval(boxAnimation,100);
+    }   } 
+    
 
 
 }
@@ -124,16 +126,21 @@ function KeyCheck(event){
 var backgroundImagePositionX = 0;
 var moveBackgroundAnimationId = 0;
 
+var score = 0;
+
 function moveBackground(){
     
     backgroundImagePositionX = backgroundImagePositionX -20;
 
     document.getElementById("background").style.backgroundPositionX = backgroundImagePositionX+"px";
 
+    score = score + 1;
+    document.getElementById("score").innerHTML = score;
+
 }
 
 
-boxMarginLeft = 500;
+boxMarginLeft = 1540;
 
 function createBoxes(){
 
@@ -149,26 +156,67 @@ function createBoxes(){
        // boxMarginLeft = boxMarginLeft + 1000;
 
        if (i < 5) {
-            boxMarginLeft = boxMarginLeft + 500;
+            boxMarginLeft = boxMarginLeft + 2000;
 
        }
 
        if (i >= 5) {
-            boxMarginLeft = boxMarginLeft + 350;
+            boxMarginLeft = boxMarginLeft + 1000;
 
        }
     }
 }
+
 
 var boxAnimationId = 0;
 
 function boxAnimation() {
     for (var i = 0; i < 10; i++) {
-        var box = document.getElementById("box" +i);
-        var currentMarginLeft = getComputedstyle(box).marginLeft;
-        var newMarginLeft = parseInt(currentMarginLeft)-25;
+        var box = document.getElementById("box" + i);
+        var currentMarginLeft = getComputedStyle(box).marginLeft;
+        var newMarginLeft = parseInt(currentMarginLeft) - 35;
         box.style.marginLeft = newMarginLeft + "px";
+        
+   
+        if (newMarginLeft >= -110 & newMarginLeft <= 100) {
+            if (boyMarginTop > 300) {
+                clearInterval(boxAnimationId);
+
+                clearInterval(runAnimationNumber);
+                runAnimationNumber = -1;
+
+                clearInterval(jumpAnimationNumber);
+                jumpAnimationNumber = -1;
+
+                clearInterval(moveBackgroundAnimationId);
+                moveBackgroundAnimationId = -1;
+
+                deadAnimationNumber=setInterval(boyDeadAnimation,100);
+            }
+        
+        }
+    
+    }
+
+}
+deadImageNumber = 1
+deadAnimationNumber = 0;
+
+
+function boyDeadAnimation() {
+    deadImageNumber = deadImageNumber + 1;
+
+
+    if (deadImageNumber == 11) {
+        deadImageNumber = 10;
 
     }
+
+
+    boy.src = "resources/Dead (" + deadImageNumber + ").png";
+
 }
+
+
+
 
