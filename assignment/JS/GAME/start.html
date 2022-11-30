@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>game</title>
+  <link rel="stylesheet" href="style.css"/>
+
+</head>
+
+<body class="body" onkeyup="keyCheck(event);" onload="createBoxes();">
+
+<div class="background" id="background">
+
+  <div class="score" id="score">0</div>
+  <img src="resources/Run (1).png" class="boy" id="boy" />
+  <!-- <div class="box" id="box"></div> -->
+  <div class="box2"></div>
+
+</div>
+<div id="end" class="end">
+  <div class="go">Game Over</div>
+  <div>Your score</div>
+  <div id="endscore">0</div>
+  <button onclick="reload();" class="btn">Try Again</button>
+</div>
+
+
+<div class="win" id="win">
+  <div class="wi"></div>
+  <div class="p">CONGRATULATION</div>
+
+  <br/><br/>
+
+
+  <button onclick="reload1();" class="btn3">PLAY AGAIN</button>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+
+
+</html>
