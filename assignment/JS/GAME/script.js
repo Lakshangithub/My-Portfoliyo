@@ -197,7 +197,7 @@ function createBoxes(){
         //if (score == 10) {
         //   // function winAnimation();
         //   // setInterval(winAnimation);
-        //   document.getElementById("win").style.visibility = visible
+        //   document.getElementById("win").style.visibility = "visible";
 
         // }
 
@@ -229,26 +229,44 @@ function boxAnimation() {
 
                 clearInterval(boxAnimationId);
 
-                clearInterval
+                clearInterval(boyRunAnimationNumberId);
+                runSound.pause();
+                boyRunAnimationId = -1;
+
+            
+                clearInterval(boyjumpAnimationNumberId);
+                jumpSound.pause();
+                boyJumpAnimationId = -1;
+
+
+                clearInterval(moveBackgroundAnimationId);
+                moveBackgroundAnimationId = -1;
+
+                backgroundMusicA.pause();
+
+                boyDeadAnimationId = setInterval(boyDeadAnimation, 100);
+                deadSound.play();
+
+
+               
             }
-
-
-
-
 
         }
 
-
-
-
-
-
-
-
-
     } 
 
-    
-    
 }  
+
+
+function reload1() {
+    location.reload();
+}
+
+// function winAnimation() {
+//   // document.getElementById("win").style.visibility = "visible";
+
+//  // if (score == 10) {
+ //      alert("ok");
+    
+// }
 
